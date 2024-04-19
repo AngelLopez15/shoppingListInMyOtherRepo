@@ -35,72 +35,60 @@ class HomeViewController: UIViewController {
         itemNine.backgroundColor = UIColor.blue
         itemTen.backgroundColor = UIColor.blue
     }
-
-    @IBAction func buttonSelectedOne(_ sender: UIButton) {
-                sender.isSelected = !sender.isSelected
-                
-                // Check if the button is selected and set the image accordingly
-                if sender.isSelected {
-                    itemOne.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
-                    itemOne.backgroundColor = UIColor.green
-                    selectedStates.append(sender.titleLabel!.text ?? "");
-                    print(selectedStates)
-                } else {
-                    // Set the default image when the button is not selected
-                    itemOne.setImage(nil, for: .normal)
-                    itemOne.backgroundColor = UIColor.blue
-                }
-    }
-
-    @IBAction func buttonSelectedTwo(_ sender: UIButton) {
-                sender.isSelected = !sender.isSelected
-                
-                // Check if the button is selected and set the image accordingly
-                if sender.isSelected {
-                    itemTwo.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
-                    itemTwo.backgroundColor = UIColor.green
-                    selectedStates.append(sender.titleLabel!.text ?? "");
-                    print(selectedStates)
-                } else {
-                    // Set the default image when the button is not selected
-                    itemTwo.setImage(nil, for: .normal)
-                    itemTwo.backgroundColor = UIColor.blue
-                }
+    
+    @IBAction func addTocart(_ sender: UIButton) {
+        print(sender.tag)
+        switch sender.tag {
+        case 0:
+            checkItem(sender, itemOne, "apple.logo")
+        case 1:
+            checkItem(sender, itemTwo, "pencil.line")
+        case 2:
+            checkItem(sender, itemThree, "calendar")
+        case 3:
+            checkItem(sender, itemFour, "newspaper.fill")
+        case 4:
+            checkItem(sender, itemFive, "paperclip")
+        case 5:
+            checkItem(sender, itemSix, "trophy")
+        case 6:
+            checkItem(sender, itemSeven, "gym.bag")
+        case 7:
+            checkItem(sender, itemEigth, "medal")
+        case 8:
+            checkItem(sender, itemNine, "keyboard")
+        case 9:
+            checkItem(sender, itemTen, "magicmouse")
+        default:
+            return
+        }
     }
     
-    @IBAction func buttonSelectedThree(_ sender: UIButton) {
-                sender.isSelected = !sender.isSelected
-                
-                // Check if the button is selected and set the image accordingly
-                if sender.isSelected {
-                    itemThree.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
-                    itemThree.backgroundColor = UIColor.green
-                    selectedStates.append(sender.titleLabel!.text ?? "");
-                    print(selectedStates)
-                } else {
-                    // Set the default image when the button is not selected
-                    itemThree.setImage(nil, for: .normal)
-                    itemThree.backgroundColor = UIColor.blue
-                }
+    func checkItem (_ sender: UIButton, _ item: UIButton, _ logo: String) {
+        sender.isSelected = !sender.isSelected
+        let nameItem = item
+        // Check if the button is selected and set the image accordingly
+        if sender.isSelected {
+            nameItem.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
+            nameItem.backgroundColor = UIColor.green
+            selectedStates.append(sender.titleLabel!.text ?? "");
+            print(selectedStates)
+        } else {
+            // Set the default image when the button is not selected
+            selectedStates = selectedStates.filter({ $0 != sender.titleLabel!.text })
+            nameItem.setImage(UIImage(systemName: logo), for: .normal)
+            nameItem.backgroundColor = UIColor.blue
+        }
     }
     
     @IBAction func itemSelected() {
-        print("Product selected!")
+        print("Products selected!")
         let listViewController = ListViewController(nibName: "ListViewController", bundle: nil)
         
+        listViewController.textListShoppingCart = selectedStates.joined(separator: ", ")
         listViewController.modalPresentationStyle = .fullScreen
         
         present(listViewController, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

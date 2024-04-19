@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,16 +40,16 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="apple.logo" catalog="system" title="apple"/>
                                     <connections>
-                                        <action selector="buttonSelectedOne:" destination="-1" eventType="touchUpInside" id="vLn-A0-YoA"/>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="uIx-eb-cv8"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn7-np-oKB">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn7-np-oKB">
                                     <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="126.66666666666667"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="pencil.line" catalog="system" title="pencil"/>
                                     <connections>
-                                        <action selector="buttonSelectedTwo:" destination="-1" eventType="touchUpInside" id="7AP-XM-jPe"/>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="cJU-cI-ofX"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -57,71 +57,92 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3AE-Uf-3VF">
                             <rect key="frame" x="0.0" y="126.66666666666666" width="393" height="126.33333333333334"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-5s-Wdl">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-5s-Wdl">
                                     <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="126.33333333333333"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="calendar" catalog="system" title="calendar"/>
                                     <connections>
-                                        <action selector="buttonSelectedThree:" destination="-1" eventType="touchUpInside" id="0zp-nN-oxB"/>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="TB2-gQ-CL0"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FQ-Nq-qOf">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FQ-Nq-qOf">
                                     <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="126.33333333333333"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="newspaper.fill" catalog="system" title="newspaper"/>
+                                    <connections>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="aC1-si-oFv"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N0g-Ii-wAF">
                             <rect key="frame" x="0.0" y="252.99999999999997" width="393" height="126.66666666666666"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXw-M2-ly0">
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXw-M2-ly0">
                                     <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="126.66666666666667"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="paperclip" catalog="system" title="paperclip"/>
+                                    <connections>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="gZI-E2-HMk"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfZ-es-BV9">
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfZ-es-BV9">
                                     <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="126.66666666666667"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="trophy" catalog="system" title="trophy"/>
+                                    <connections>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="Yss-ZX-mMN"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f6G-Yd-DcN">
                             <rect key="frame" x="0.0" y="379.66666666666669" width="393" height="126.33333333333331"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsy-Eg-6Ar">
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsy-Eg-6Ar">
                                     <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="126.33333333333333"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="gym.bag" catalog="system" title="bag"/>
+                                    <connections>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="8sl-qi-pJs"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaN-cg-OW0">
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaN-cg-OW0">
                                     <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="126.33333333333333"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="medal" catalog="system" title="medal"/>
+                                    <connections>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="ncJ-VI-a9r"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oby-hC-aMw">
                             <rect key="frame" x="0.0" y="506.00000000000006" width="393" height="126.66666666666669"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jra-vC-jsX">
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jra-vC-jsX">
                                     <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="126.66666666666667"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="keyboard" catalog="system" title="keyboard"/>
+                                    <connections>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="2t6-UY-fgK"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-Y4-SPE">
+                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-Y4-SPE">
                                     <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="126.66666666666667"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemGray6Color"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="magicmouse" catalog="system" title="magicmouse"/>
+                                    <connections>
+                                        <action selector="addTocart:" destination="-1" eventType="touchUpInside" id="mML-zU-dqV"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
